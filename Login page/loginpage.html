@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Web Sitesi</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Hoş Geldiniz</h1>
+        <button id="theme-toggle" class="theme-toggle"><i class="fas fa-adjust"></i></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./main.html"><i class="fas fa-home"></i> Anasayfa</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> Hakkında</a></li>
+            <li><a href="#services"><i class="fas fa-cogs"></i> Hizmetler</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> İletişim</a></li>
+            <li><a href="#team"><i class="fas fa-users"></i> Takım</a></li>
+            <li><a href="#testimonials"><i class="fas fa-comments"></i> Yorumlar</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Anasayfa</h2>
+            <p>Bu, basit bir HTML, CSS ve JavaScript kullanarak yapılmış bir web sitesidir.</p>
+        </section>
+        <section id="about">
+            <h2>Hakkında</h2>
+            <p>Bu web sitesi, modern web geliştirme tekniklerini öğrenmek için hazırlanmıştır.</p>
+        </section>
+        <section id="services">
+            <h2>Hizmetler</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Geliştirme</h3>
+                    <p>Profesyonel web geliştirme hizmetleri sunuyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobil Uygulama</h3>
+                    <p>Mobil cihazlar için uygulama geliştirme hizmetleri.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Bulut Hizmetleri</h3>
+                    <p>Bulut bilişim çözümleri sunuyoruz.</p>
+                </div>
+            </div>
+        </section>
+        <section id="team">
+            <h2>Takım</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Ali Veli</h3>
+                    <p>Kurucu</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Ayşe Fatma</h3>
+                    <p>Yazılım Geliştirici</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3>Mehmet Can</h3>
+                    <p>Proje Yöneticisi</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2>Yorumlar</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-item">
+                    <p>"Bu hizmet harika! Gerçekten işimi kolaylaştırdı."</p>
+                    <h3>Ahmet Yılmaz</h3>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Harika bir ekip ve mükemmel sonuçlar."</p>
+                    <h3>Elif Koca</h3>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Tekrar çalışmak için sabırsızlanıyorum."</p>
+                    <h3>Canan Demir</h3>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>İletişim</h2>
+            <form id="contactForm">
+                <label for="name">İsim:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message" id="nameError"></span>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="emailError"></span>
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error-message" id="messageError"></span>
+                <button type="submit">Gönder</button>
+            </form>
+            <div id="formSuccessMessage" class="success-message"></div>
+        </section>
+    </main>
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <footer>
+        <p>&copy; 2024 Gelişmiş Web Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

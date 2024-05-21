@@ -1,0 +1,286 @@
+/* Genel stil ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg: linear-gradient(to right, #4CAF50, #2E7D32);
+    --nav-bg: #333;
+    --footer-bg: #333;
+    --form-focus: #4CAF50;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #f4f4f4;
+    --header-bg: linear-gradient(to right, #2E7D32, #1B5E20);
+    --nav-bg: #111;
+    --footer-bg: #111;
+    --form-focus: #1B5E20;
+}
+
+header {
+    background: var(--header-bg);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+[data-theme="dark"] section {
+    background: #444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Form stilleri */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--form-focus);
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+form button {
+    background-color: var(--form-focus);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: #4CAF50;
+    font-size: 16px;
+    margin-top: 20px;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* Hizmetler bölümü */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #e0e0e0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Takım bölümü */
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+}
+
+/* Yorumlar bölümü */
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-item p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-item h3 {
+    margin-top: 10px;
+}
+
+/* Yukarı çık düğmesi */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+/* Duyarlı tasarım */
+@media (max-width: 768px) {
+    .services-container,
+    .team-container,
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
